@@ -1,0 +1,21 @@
+.task-form{
+    width:75vw;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+.wrapper{
+    height:100%;
+    position:relative;
+}
+
+.task-list{
+    display:block;
+    z-index: 2;
+    position:inherit;
+    height: 100%;
+    width:100%;
+    background-color:#333;
+}
