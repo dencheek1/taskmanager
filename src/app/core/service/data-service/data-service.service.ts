@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { DataEntry, State } from '../../interface/data-entry';
+import { DataEntry, State } from '../../interface/data-entrence';
 import { data } from '../../../../assets/testData'
 
 @Injectable({

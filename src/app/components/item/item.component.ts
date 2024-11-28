@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { DataEntry } from '../../core/interface/data-entry';
+import { DataEntry } from '../../core/interface/data-entrence';
 import { CommonModule } from '@angular/common';
 
 @Component({
