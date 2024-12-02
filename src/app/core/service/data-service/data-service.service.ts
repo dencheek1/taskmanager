@@ -13,8 +13,16 @@ export class DataService {
 
   readonly dataSignal = signal<DataEntry[]>([])
   readonly viewData = signal<DataEntry[]>([]);
-  removeItem(item: DataEntry) { }
-  addItem(item: DataEntry) { }
+  removeItem(item: DataEntry) { 
+    let data = [...this.dataSignal()];
+    data.splice(data.indexOf(item),1);
+   this.dataSignal.set(data); 
+  }
+  addItem(item: DataEntry) {
+    let data = [...this.dataSignal(), item];
+    this.dataSignal.set(data);
+   }
+
   reorderViewData(indexItem: DataEntry, movedItem:DataEntry){
 
   }
