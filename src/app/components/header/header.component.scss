@@ -1,0 +1,13 @@
+@use '../../shared/style/colors';
+svg{
+    height:50px;
+    margin:5px;
+}
+
+header{
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color:colors.$main-dark;
+}

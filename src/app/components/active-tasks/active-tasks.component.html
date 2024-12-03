@@ -1,1 +1,5 @@
-<p>active-tasks works!</p>
+<div class="list">
+@for (entry of data(); track $index) {
+    <app-item class='item' [item]="entry"></app-item>
+}
+</div>

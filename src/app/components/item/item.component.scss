@@ -10,16 +10,16 @@
   transition: 0.3s;
   color: white;
   text-wrap:wrap;
+  user-select:none;
 
   &.fancy-shadow {
     &::before,
     &::after {
-      opacity: 0.8;
+      opacity: 0.4;
     }
 
     &::after {
-      filter: blur(18px);
-      opacity: 1;
+      filter: blur(10px);
     }
   }
 
@@ -52,7 +52,7 @@
   display: block;
   content: "";
   background: inherit;
-  //   filter: blur(1px);
+    filter: blur(1px);
   z-index: -1;
 }
 .fancy-shadow::after {

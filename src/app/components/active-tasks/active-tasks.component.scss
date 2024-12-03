@@ -1,0 +1,9 @@
+@use '../../shared/style/colors';
+
+.item{
+    margin:15px;
+}
+
+.list{
+    background-color: colors.$main;
+}

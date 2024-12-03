@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { DataEntry, State } from '../../interface/data-entrence';
 import { data } from '../../../../assets/testData'
 
@@ -18,8 +18,9 @@ export class DataService {
     data.splice(data.indexOf(item),1);
    this.dataSignal.set(data); 
   }
+
   addItem(item: DataEntry) {
-    let data = [...this.dataSignal(), item];
+    let data = [item, ...this.dataSignal() ];
     this.dataSignal.set(data);
    }
 
@@ -27,5 +28,14 @@ export class DataService {
 
   }
 
-  changeState(item:DataEntry, state: State){}
+  changeState(item:DataEntry, state: State){
+    this.removeItem(item);
+    let it = item;
+    it.state = state;
+    this.addItem(item);
+  }
+
+  active(){
+    return computed(() => this.dataSignal().filter( el => el.state == State.active));
+  }
 }
