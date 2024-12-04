@@ -35,7 +35,11 @@ export class DataService {
     this.addItem(item);
   }
 
-  active(){
+  getActive(){
     return computed(() => this.dataSignal().filter( el => el.state == State.active));
   }
+
+ getInactive(){
+  return computed(() => this.dataSignal().filter( el => el.state != State.active));
+ }
 }

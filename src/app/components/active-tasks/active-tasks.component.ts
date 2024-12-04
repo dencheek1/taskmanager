@@ -11,5 +11,5 @@ import { ItemComponent } from "../item/item.component";
 })
 export class ActiveTasksComponent {
   private ds = inject(DataService);
-  data = this.ds.active();
+  data = this.ds.getActive();
 }

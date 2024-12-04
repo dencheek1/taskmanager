@@ -1,9 +1,16 @@
-@use '../../shared/style/colors';
+@use "../../shared/style/colors";
 
-.item{
-    margin:15px;
+.item {
+  margin: 15px;
 }
 
-.list{
-    background-color: colors.$main;
+.list {
+  background-color: colors.$main;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: max-content;
+  row-gap: 1em;
 }

@@ -13,6 +13,6 @@ import { ItemComponent } from "../item/item.component";
 export class TaskListComponent {
 constructor( private ds: DataService){}
 
-data = this.ds.dataSignal;
+data = this.ds.getInactive();
 
 }
