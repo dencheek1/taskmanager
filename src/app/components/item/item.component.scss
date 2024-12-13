@@ -1,4 +1,4 @@
-@use '../../shared/style/colors';
+@use "../../shared/style/colors";
 
 .item {
   width: 100%;
@@ -9,11 +9,10 @@
   font-size: 1em;
   transition: 0.3s;
   color: white;
-  text-wrap:wrap;
-  user-select:none;
+  text-wrap: wrap;
+  user-select: none;
 
-
-  &.fancy-shadow {
+  &.fancy-shadow-hover {
     // &::before,
     &::after {
       opacity: 0.4;
@@ -22,9 +21,15 @@
     &::after {
       filter: blur(10px);
     }
+    .data {
+      position: relative;
+      transition: inherit;
+      opacity: 0.6;
+      z-index: 5;
+    }
   }
 
-  &.fancy-shadow:hover {
+  &.fancy-shadow-hover:hover {
     &::after {
       filter: blur(6px);
       opacity: 1;
@@ -34,7 +39,7 @@
     }
   }
   .data {
-    position:relative;
+    position: relative;
     transition: inherit;
     opacity: 0.6;
     z-index: 5;
@@ -55,13 +60,13 @@
   display: block;
   content: "";
   background: inherit;
-    // filter: blur(1px);
+  // filter: blur(1px);
   z-index: 2;
 }
 
 .fancy-shadow::after {
   content: "";
-    border-radius: inherit;
+  border-radius: inherit;
   position: absolute;
   transition: inherit;
   top: -4px;

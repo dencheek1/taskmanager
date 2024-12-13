@@ -1,35 +1,38 @@
-@use '../../../shared/style/colors';
+@use "../../../shared/style/colors";
 
-.wrapper{
-    height:100vh;
-    // background-color:red;
-    width:100%;
-}
-
-.grid-columns{
-    display:grid;
-    grid-template-columns: 480px 1fr;
-    height:100%;
-}
-.flex-row{
-    display:flex;
-    width:100%;
-    // background:yellow;
-    flex-grow:1;
-}
-.task-list-tab{
-    min-width:250px;
-    max-width:400px;
-    background-color:colors.$main;
-    flex-grow:1;
+.wrapper {
+  height: 100vh;
+  // background-color:red;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
 }
 
-footer{
-    height:50px;
-    background-color: colors.$main-dark;
+// .flex-row{
+//     display:flex;
+//     width:100%;
+//     // background:yellow;
+// }
+
+// .task-list-tab{
+//     min-width:250px;
+//     max-width:400px;
+//     max-height:100%;
+//     background-color:colors.$main;
+//     flex-grow:1;
+// }
+
+.row {
+  display: flex;
+  height: calc(100% - 100px);
+  // flex-grow:1
+}
+footer {
+  height: 50px;
+  background-color: colors.$main-dark;
 }
 
-.active-task-view{
-    position: static;
-    flex-grow:1;
+.active-task-view {
+  position: static;
+  flex-grow: 1;
 }
