@@ -1,4 +1,5 @@
 export interface DataEntry{
+id:string;
 text:string;
 date: Date;
 state: State;

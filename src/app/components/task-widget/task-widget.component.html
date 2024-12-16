@@ -1,7 +1,7 @@
 <div class="wrapper">
+    <app-task-form class="task-form" [style.left]="state() ? '-100%': '100%'"></app-task-form>
     <div class="tabs">
         <div class="new-todo" (click)="toggleForm()">todo</div>
     </div>
-    <app-task-list class="task-list"></app-task-list>
-    <app-task-form class="task-form" [style.left]="state() ? '-100%': '100%'"></app-task-form>
+    <app-task-list (activate)="activateItem($event)" class="task-list"></app-task-list>
 </div>

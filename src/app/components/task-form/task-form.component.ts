@@ -23,6 +23,7 @@ export class TaskFormComponent {
   }
   addItem() {
     this.dataService.addItem({
+      id: (new Date()).getTime().toString(),
       date: new Date(),
       state: State.new,
       text:this.inputForm.get('text')?.value ?? 'none',

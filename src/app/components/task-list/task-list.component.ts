@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { DataService } from '../../core/service/data-service/data-service.service';
 import { ItemComponent } from "../item/item.component";
 
@@ -14,5 +14,11 @@ export class TaskListComponent {
 constructor( private ds: DataService){}
 
 data = this.ds.getInactive();
+
+@Output('activate') activateEvent = new EventEmitter<string>();
+
+  activate(id: string){
+    this.activateEvent.emit(id);
+  }
 
 }
