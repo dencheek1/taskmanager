@@ -32,6 +32,17 @@
     flex-grow: 1;
     background-color:colors.$main;
     z-index:2;
+    scrollbar-width: thin;
+    scrollbar-color: colors.$textColor colors.$main-dark 
+    // ::-webkit-scrollbar{
+    //     width:10px;
+    // }
+    // ::-webkit-scrollbar-button{
+
+    // }
+    // ::-webkit-scrollbar-track{
+
+    // }
 }
 
 .tabs{

@@ -13,15 +13,18 @@ import { State } from '../../core/interface/data-entrence';
 })
 export class TaskWidgetComponent {
   state = signal<Boolean>(false);
-private ds = inject(DataService);
+  private ds = inject(DataService);
 
   toggleForm() {
     this.state.set(!this.state());
   }
 
-  activateItem(id:string){
+  activateItem(id: string) {
+    let active = this.ds.getActive();
+    if (active().length > 5) {
+      let last = active().at(-1);
+      last && this.ds.changeState(last, State.inProgress);
+    }
     this.ds.changeStateId(id, State.active);
-    console.log(id);
-    console.log(this.ds.getById(id));
   }
 }

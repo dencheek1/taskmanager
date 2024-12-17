@@ -1,5 +1,5 @@
 <form class="form" [formGroup]="inputForm">
-<textarea formControlName="text" (keydown.enter)="$event.preventDefault()" (input)="textChange($event)" name="item text" spellcheck="off" maxlength="300" wrap="hard" id=""></textarea>
+<textarea placeholder="enter description" formControlName="text" (keydown.enter)="$event.preventDefault()" (input)="textChange($event)" name="item text" spellcheck="off" maxlength="300" wrap="hard" id=""></textarea>
  <!-- <input type="text"> -->
 <div class="button" (mouseup)="addItem()">commit</div>
 </form>
